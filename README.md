@@ -143,3 +143,7 @@
 - 可以通过修改`static/css/style.css`文件来定制界面样式
 - 可以通过修改`app.py`中的系统指令来调整AI助手的行为
 - 可以在`static/js/app.js`中添加更多快捷按钮
+
+![7J `68_3LG{{ JLKHKAB(FS](https://github.com/user-attachments/assets/9d35df55-a51a-4a1c-9edd-698c477a3e29)
+![~T4 A5TM(DCCLONIBM)@ MK](https://github.com/user-attachments/assets/4d6f2b0c-41b5-4c6e-a14f-a224abb89ea4)
+
