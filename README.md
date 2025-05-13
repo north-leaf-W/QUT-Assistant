@@ -34,6 +34,26 @@
    pip install "qwen-agent[code_interpreter]"
    ```
 
+## 使用前配置
+
+> **重要**：在运行应用前，您需要在`app.py`和`qwen-agent-multi-files.py`（如果使用）中配置有效的API密钥。
+
+1. 打开`app.py`文件，找到以下代码段：
+   ```python
+   llm_cfg = {
+       'model': 'deepseek-v3',
+       'model_server': 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+       'api_key': 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',  # 替换为您的API密钥
+       'generate_cfg': {
+           'top_p': 0.8
+       }
+   }
+   ```
+
+2. 将`'api_key': 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'`中的占位符替换为您的实际API密钥。
+
+3. 保存文件后再启动应用。
+
 ## 使用方法
 
 1. 确保您在项目根目录下有一个`docs`文件夹，并在其中放入相关文档（PDF、Word等）
@@ -69,8 +89,8 @@
 ## 目录结构
 
 ```
-├── app.py                 # 后端Flask应用
-├── qwen-agent-multi-files.py  # 命令行版本（可选）
+├── app.py                 # 主要应用程序（Web版本）
+├── qwen-agent-multi-files.py  # 命令行版本（仅供参考，不再积极维护）
 ├── requirements.txt       # 项目依赖
 ├── docs/                  # 文档目录（当前为示例文档）
 │   ├── 信息与控制工程学院2024年推免工作实施细则.pdf
@@ -87,11 +107,20 @@
         └── logo.png       # 学校LOGO
 ```
 
+## 关于命令行版本
+
+`qwen-agent-multi-files.py`是本项目的命令行版本，主要用途：
+- 在不需要Web界面的环境中快速测试
+- 作为学习Qwen-Agent基本用法的参考示例
+- 便于故障排查和开发调试
+
+该版本不再积极维护，建议主要使用`app.py`（Web版本）。
+
 ## 注意事项
 
 - 如果遇到文档编码问题，请确保文档使用UTF-8编码
 - 服务启动时可能需要几分钟时间来加载和处理文档
-- 请确保API密钥配置正确
+- 请确保API密钥配置正确，没有有效API密钥将无法运行
 - 在不同Python环境中运行可能需要重新安装依赖
 - 图像生成功能依赖于外部服务，需要网络连接
 
