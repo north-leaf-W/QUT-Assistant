@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青岛理工大学智能助手</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="/static/images/logo.png" alt="青岛理工大学logo" class="logo">
+                <h1>青岛理工大学智能助手</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message system">
+                        <div class="message-content">
+                            <p>你好！我是青岛理工大学智能助手，有什么我可以帮助你的吗？</p>
+                            <p>你可以尝试询问有关学校的问题，例如：</p>
+                            <ul>
+                                <li>青岛理工大学体测有哪些项目？</li>
+                                <li>学生综合素质评价办法是什么？</li>
+                                <li>生成图像：校园风景</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <form id="question-form">
+                        <input type="text" id="question-input" placeholder="请输入你的问题..." autocomplete="off">
+                        <button type="submit" id="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 青岛理工大学 - AI智能助手</p>
+        </footer>
+    </div>
+
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner"></div>
+        <p>正在思考中...</p>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
